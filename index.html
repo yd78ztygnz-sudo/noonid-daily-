@@ -1,15 +1,1 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>A Little Cat for You 🐾</title>
-<style>
-*{box-sizing:border-box}body{margin:0;min-height:100svh;background:#f6f1e8;color:#37342f;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;display:flex;justify-content:center;align-items:center;padding:18px}.page{width:min(100%,720px);text-align:center}.paw{font-size:25px}h1{font:500 clamp(32px,8vw,52px) Georgia,serif;margin:5px 0}.date{color:#827a70;margin:8px 0 18px}.photo{aspect-ratio:4/5;overflow:hidden;border-radius:24px;box-shadow:0 14px 40px rgba(55,52,47,.15);background:#e8e1d5}.photo img{width:100%;height:100%;object-fit:cover;display:block}.msg{font:18px Georgia,serif;color:#5e584f;margin-top:18px}.small{font-size:12px;color:#aaa197;margin-top:8px}
-</style></head>
-<body><main class="page"><div class="paw">🐾</div><h1>A Little Cat for You</h1><div class="date" id="date"></div><div class="photo"><img id="cat" alt="Today's cat"></div><div class="msg">One little cat for today ♡</div><div class="small">Come back tomorrow for another one.</div></main>
-<script>
-const images=["data:image/webp;base64,UklGRjQAAABXRUJQVlA4WAoAAAAQAAAAAQAAAgAAQUxQSAwAAAAQAAABAAEAAwAASUND","data:image/webp;base64,UklGRjQAAABXRUJQVlA4WAoAAAAQAAAAAQAAAgAAQUxQSAwAAAAQAAABAAEAAwAASUND","data:image/webp;base64,UklGRjQAAABXRUJQVlA4WAoAAAAQAAAAAQAAAgAAQUxQSAwAAAAQAAABAAEAAwAASUND","data:image/webp;base64,UklGRjQAAABXRUJQVlA4WAoAAAAQAAAAAQAAAgAAQUxQSAwAAAAQAAABAAEAAwAASUND","data:image/webp;base64,UklGRjQAAABXRUJQVlA4WAoAAAAQAAAAAQAAAgAAQUxQSAwAAAAQAAABAAEAAwAASUND","data:image/webp;base64,UklGRjQAAABXRUJQVlA4WAoAAAAQAAAAAQAAAgAAQUxQSAwAAAAQAAABAAEAAwAASUND","data:image/webp;base64,UklGRjQAAABXRUJQVlA4WAoAAAAQAAAAAQAAAgAAQUxQSAwAAAAQAAABAAEAAwAASUND","data:image/webp;base64,UklGRjQAAABXRUJQVlA4WAoAAAAQAAAAAQAAAgAAQUxQSAwAAAAQAAABAAEAAwAASUND","data:image/webp;base64,UklGRjQAAABXRUJQVlA4WAoAAAAQAAAAAQAAAgAAQUxQSAwAAAAQAAABAAEAAwAASUND","data:image/webp;base64,UklGRjQAAABXRUJQVlA4WAoAAAAQAAAAAQAAAgAAQUxQSAwAAAAQAAABAAEAAwAASUND","data:image/webp;base64,UklGRjQAAABXRUJQVlA4WAoAAAAQAAAAAQAAAgAAQUxQSAwAAAAQAAABAAEAAwAASUND","data:image/webp;base64,UklGRjQAAABXRUJQVlA4WAoAAAAQAAAAAQAAAgAAQUxQSAwAAAAQAAABAAEAAwAASUND","data:image/webp;base64,UklGRjQAAABXRUJQVlA4WAoAAAAQAAAAAQAAAgAAQUxQSAwAAAAQAAABAAEAAwAASUND"];
-function day(){let p=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Bangkok",year:"numeric",month:"2-digit",day:"2-digit",weekday:"long"}).formatToParts(new Date());let g=t=>p.find(x=>x.type===t).value;return{y:g("year"),m:g("month"),d:g("day"),w:g("weekday")}}
-function pick(x){let s=x.y+"-"+x.m+"-"+x.d,h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return Math.abs(h)%images.length}
-let d=day();document.getElementById("cat").src=images[pick(d)];document.getElementById("date").textContent=d.w+", "+d.d+"/"+d.m+"/"+d.y;
-</script></body></html>
+
